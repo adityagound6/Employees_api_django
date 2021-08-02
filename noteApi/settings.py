@@ -14,7 +14,8 @@ SECRET_KEY = 'w7)_de=(wdr90@1vfvf4^st7!(n3c7^m60#a5e02p&ivnbe6)4'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'employeeapidjangoprojects.herokuapp.com'
+    'employeeapidjangoprojects.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
