@@ -14,8 +14,7 @@ SECRET_KEY = 'w7)_de=(wdr90@1vfvf4^st7!(n3c7^m60#a5e02p&ivnbe6)4'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'employeeapidjangoprojects.herokuapp.com',
-    '127.0.0.1'
+    'employeeapidjangoprojects.herokuapp.com'
 ]
 
 
@@ -64,16 +63,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'noteApi.wsgi.application'
 
 
+#ec2-3-230-38-145.compute-1.amazonaws.com
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'employee_api',
-        'USER': 'postgres',
-        'PASSWORD' :  'Aadi@123',
-        'HOST' : 'localhost',
+        'NAME': 'dcn3sb6lt2gica',
+        'USER': 'upodgyoommoygq',
+        'PASSWORD' :  '1300821421e9d143e237841a8f5c5cfe95daea0f8a2ecd9804e657d39cdc62f4',
+        'HOST' : 'ec2-3-230-38-145.compute-1.amazonaws.com',
         'PORT' : '5432',
     }
 }
