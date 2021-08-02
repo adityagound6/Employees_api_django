@@ -13,7 +13,9 @@ SECRET_KEY = 'w7)_de=(wdr90@1vfvf4^st7!(n3c7^m60#a5e02p&ivnbe6)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'employeeapidjangoprojects.herokuapp.com'
+]
 
 
 # Application definition
