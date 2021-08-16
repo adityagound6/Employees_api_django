@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="contaner m-3 p-3">
+    <form class="form-horizontal" action="" method="POST" autocomplete="off">
+        {%csrf_token%}
+        <div class="form-group mb-2">
+            {{form.user_id|as_crispy_field}}
+        </div>
+        <div class="form-group mb-2">
+            {{form.username|as_crispy_field}}
+        </div>
+        <div class="form-group mb-2">
+            {{form.note_text|as_crispy_field}}
+        </div>
+        
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
+                Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

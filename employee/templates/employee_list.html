@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block content %}
+<table class="table table-dark">
+    <thead class="">
+      <tr>
+        <th scope="col">User id</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Note Text</th>
+        <th scope="col">Date</th>
+        <th scope="col">Last Update</th>
+        <th scope="col"><a class="btn btn-primary" href="{% url 'employee_form' %}" role="button">Add</a></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for employee_list in employee_list %}
+      <tr>
+        <td>{{employee_list.user_id}}</td>
+        <td>{{employee_list.username}}</td>
+        <td>{{employee_list.note_text}}</td>
+        <td>{{employee_list.date}}</td>
+        <td>{{employee_list.last_update_date}}</td>
+        <td>
+          <a class="btn btn-primary p-1 m-1" href="{% url 'employee_delete' employee_list.user_id %}" role="button">Delete</a>
+          <a class="btn btn-primary p-1 m-1" href="{% url 'employee_update' employee_list.user_id %}" role="button">Update</a>
+          </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'employee/css/employee_list.css' %}">
+{% endblock css %}
